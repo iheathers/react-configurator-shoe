@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-configurator-shoe/static/css/main.5218fd49.css",
+    "main.js": "/react-configurator-shoe/static/js/main.30a6da71.js",
+    "static/js/787.73e9705c.chunk.js": "/react-configurator-shoe/static/js/787.73e9705c.chunk.js",
+    "index.html": "/react-configurator-shoe/index.html",
+    "main.5218fd49.css.map": "/react-configurator-shoe/static/css/main.5218fd49.css.map",
+    "main.30a6da71.js.map": "/react-configurator-shoe/static/js/main.30a6da71.js.map",
+    "787.73e9705c.chunk.js.map": "/react-configurator-shoe/static/js/787.73e9705c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5218fd49.css",
+    "static/js/main.30a6da71.js"
+  ]
+}
