@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Environment, OrbitControls } from "@react-three/drei";
+
+import "./css/App.css";
+import "./css/Shoe.css";
+import Car from "./objects/Car";
+import { Picker } from "./components/ColorPicker";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Picker />
+      <Canvas>
+        <OrbitControls />
+        <ambientLight intensity={0.5} />
+        <spotLight
+          intensity={0.5}
+          angle={0.1}
+          penumbra={1}
+          position={[10, 15, 10]}
+          castShadow
+        />
+
+        <Suspense fallback={null}>
+          <Car />
+          <Environment files="sky.hdr" />
+        </Suspense>
+      </Canvas>
+    </>
   );
 }
 
