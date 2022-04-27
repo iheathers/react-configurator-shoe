@@ -32,7 +32,7 @@ export default function Car({ ...props }) {
     }
   }, [hovered]);
 
-  const { nodes, materials } = useGLTF("/car/scene.gltf");
+  const { nodes, materials } = useGLTF("car.glb");
 
   return (
     <group
@@ -55,74 +55,92 @@ export default function Car({ ...props }) {
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           geometry={nodes.Object_2.geometry}
+          material-color={carSnap.items["280z_Brake_lamp"]}
           material={materials["280z_Brake_lamp"]}
         />
         <mesh
           geometry={nodes.Object_3.geometry}
+          material-color={carSnap.items["280z_CarPaint"]}
           material={materials["280z_CarPaint"]}
         />
         <mesh
           geometry={nodes.Object_4.geometry}
+          material-color={carSnap.items["280z_Reverse_lamp"]}
           material={materials["280z_Reverse_lamp"]}
         />
         <mesh
           geometry={nodes.Object_5.geometry}
+          material-color={carSnap.items["280z_Carbon"]}
           material={materials["280z_Carbon"]}
         />
         <mesh
           geometry={nodes.Object_6.geometry}
+          material-color={carSnap.items["280z_Windows"]}
           material={materials["280z_Windows"]}
         />
         <mesh
           geometry={nodes.Object_7.geometry}
+          material-color={carSnap.items["280z_Plastic"]}
           material={materials["280z_Plastic"]}
         />
         <mesh
           geometry={nodes.Object_8.geometry}
+          material-color={carSnap.items["280z_Lens"]}
           material={materials["280z_Lens"]}
         />
         <mesh
           geometry={nodes.Object_9.geometry}
+          material-color={carSnap.items["280z_Chrome"]}
           material={materials["280z_Chrome"]}
         />
         <mesh
           geometry={nodes.Object_10.geometry}
+          material-color={carSnap.items["280z_Headlight_lamp"]}
           material={materials["280z_Headlight_lamp"]}
         />
         <mesh
           geometry={nodes.Object_11.geometry}
+          material-color={carSnap.items["280z_Turnsignal_lamp"]}
           material={materials["280z_Turnsignal_lamp"]}
         />
         <mesh
           geometry={nodes.Object_12.geometry}
+          material-color={carSnap.items["280z_Blackout"]}
           material={materials["280z_Blackout"]}
         />
         <mesh
           geometry={nodes.Object_13.geometry}
+          material-color={carSnap.items["280z_Brakes"]}
           material={materials["280z_Brakes"]}
         />
         <mesh
           geometry={nodes.Object_14.geometry}
+          material-color={carSnap.items["SSR_Rim"]}
           material={materials.SSR_Rim}
         />
         <mesh
           geometry={nodes.Object_15.geometry}
+          material-color={carSnap.items["SSR_Rim"]}
           material={materials.SSR_Rim}
         />
         <mesh
           geometry={nodes.Object_16.geometry}
+          material-color={carSnap.items.SSR_Rim}
           material={materials.SSR_Rim}
         />
         <mesh
           geometry={nodes.Object_17.geometry}
+          material-color={carSnap.items.SSR_Rim}
           material={materials.SSR_Rim}
         />
         <mesh
           geometry={nodes.Object_18.geometry}
+          material-color={carSnap.items.SSR_Tire}
           material={materials.SSR_Tire}
         />
         <mesh
           geometry={nodes.Object_19.geometry}
+          material-color={carSnap.items["280z_Textures"]}
           material={materials["280z_Textures"]}
         />
       </group>
