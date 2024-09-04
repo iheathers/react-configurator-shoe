@@ -1,70 +1,104 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Configurator Shoe
 
-## Available Scripts
+This project is a 3D model configurator application built with **React** and **React Three Fiber**. The app allows users to interact with and customize 3D models of shoes, cars, and bikes. Users can rotate, zoom, and change the color of different parts of the models, with changes reflected in real-time.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Licensing](#model-licensing)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **3D Model Viewer**: Users can view and interact with 3D models using mouse controls (rotate, zoom, and pan).
+- **Customization**: Ability to change the colors of different parts of the models such as car paint, rims, tires, and shoes using an intuitive color picker.
+- **Real-time Updates**: Changes in the color are instantly reflected in the model.
+- **Preloaded Models**: Multiple 3D models like cars, bikes, and shoes are included, each with detailed textures and materials.
+- **Lighting and Environment**: Custom lighting setup enhances the user experience.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**: JavaScript library for building the UI.
+- **React Three Fiber**: Renderer for Three.js in React, enabling 3D graphics.
+- **@react-three/drei**: Helper library for Three.js, used to load models and configure environments.
+- **Valtio**: For managing the state of the customization options (color changes).
+- **react-colorful**: For providing the interactive color picker.
+- **Web Vitals**: For performance measurement and analytics.
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```plaintext
+.
+├── README.md
+├── Scene.js                # 3D model scene (motorcycle)
+├── Shoe-draco.js           # 3D model for shoe
+├── package-lock.json
+├── package.json
+├── public
+│   ├── bike-poly           # Assets and textures for the motorcycle model
+│   ├── car                 # Assets and textures for the car model
+│   ├── chopper             # Assets and textures for the chopper model
+│   ├── cyberpunk_bike      # Assets and textures for the cyberpunk bike
+│   ├── car.glb             # 3D model for car
+│   ├── shoe-draco.glb      # 3D model for shoe
+│   └── sky.hdr             # Environment HDR for lighting
+└── src
+    ├── App.js              # Main application file
+    ├── components
+    │   └── ColorPicker.js  # Color picker component
+    ├── css                 # CSS files for styling
+    ├── index.js            # Entry point for React
+    ├── objects             # 3D models of bike, car, and shoe
+    ├── reportWebVitals.js  # Performance monitoring
+    ├── setupTests.js       # Setup for testing with Jest
+    └── states              # State management for model color changes
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project locally, follow these steps:
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/iheathers/react-configurator-shoe.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd react-configurator-shoe
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After starting the development server, the app will be available at `http://localhost:3000`. You can interact with the 3D models by:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Using the mouse to rotate, zoom, and pan the models.
+- Changing the color of specific parts of the models using the color picker on the left side of the screen.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Model Licensing
 
-## Learn More
+- **Datsun 280Z** car model is sourced from [Sketchfab](https://sketchfab.com/3d-models/free-datsun-280z-0789ab2ece9442de94b3c41595e0ecbd) and licensed under [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/).
+- **Shoe model** and other 3D models were imported using GLTF and auto-generated by `gltfjsx`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Enhancements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add more 3D models for customization.
+- Enable texture customization and add more materials.
+- Optimize model loading time and performance.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
