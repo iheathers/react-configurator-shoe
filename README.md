@@ -3,6 +3,10 @@
 
 This project is a 3D model configurator application built with **React** and **React Three Fiber**. The app allows users to interact with and customize 3D models of shoes, cars, and bikes. Users can rotate, zoom, and change the color of different parts of the models, with changes reflected in real-time.
 
+## Link to the App
+
+You can view and interact with the app here: [React Configurator Shoe](https://iheathers.github.io/react-configurator-shoe/).
+
 ## Table of Contents
 
 - [Features](#features)
